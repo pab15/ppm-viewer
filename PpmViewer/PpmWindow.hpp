@@ -30,7 +30,7 @@ private:
 		 {0},
 		 {"Image Distortions", 0, 0, 0, FL_SUBMENU},
 			{"Grayscale", 0, applyEffect, (void*)ImageEffectType::Greyscale},
-			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RandomNoise},
 			{"High Contrast", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
 			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
 			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},

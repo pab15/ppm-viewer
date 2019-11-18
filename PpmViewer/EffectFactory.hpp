@@ -7,6 +7,7 @@
 #include "NegateBlueEffect.hpp"
 #include "GrayscaleEffect.hpp"
 #include "RandomNoiseEffect.hpp"
+#include "HighContrastEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -63,6 +64,10 @@ public:
 
 		case ImageEffectType::RandomNoise:
 			return new RandomNoiseEffect{};
+			break;
+
+		case ImageEffectType::HighContrast:
+			return new HighContrastEffect{};
 			break;
 
 		default: 

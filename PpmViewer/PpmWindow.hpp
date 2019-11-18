@@ -12,14 +12,34 @@ class PpmWindow : public Fl_Double_Window
 {
 private:
 	Fl_Menu_Bar* _menu = nullptr;
-	Fl_Menu_Item _top_bar[8] = {
+	Fl_Menu_Item _top_bar[29] = {
 		{"&File", 0, 0, 0, FL_SUBMENU},
 		{"Open", FL_CTRL + 'o', openFileCallback, this},
 		{"Quit",	FL_CTRL + FL_F + 4, quitCallback, 0},
 		{0}, //this ends a menu group; end of File dropdown
 		{"&Effects", 0, 0, 0, FL_SUBMENU},
-		{"Remove Red", 0, applyEffect, (void*)ImageEffectType::RemoveRed},
-		{"Remove Green", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+		{"Remove Color", 0, 0, 0, FL_SUBMENU},
+			{"Remove Red", 0, applyEffect, (void*)ImageEffectType::RemoveRed},
+			{"Remove Green", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Remove Blue", 0, applyEffect, (void*)ImageEffectType::RemoveBlue},
+		 {0},
+		 {"Negate Color", 0, 0, 0, FL_SUBMENU},
+			{"Negate Red", 0, applyEffect, (void*)ImageEffectType::NegateRed},
+			{"Negate Green", 0, applyEffect, (void*)ImageEffectType::NegateGreen},
+			{"Negate Blue", 0, applyEffect, (void*)ImageEffectType::NegateBlue},
+		 {0},
+		 {"Image Distortions", 0, 0, 0, FL_SUBMENU},
+			{"Grayscale", 0, applyEffect, (void*)ImageEffectType::Greyscale},
+			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"High Contrast", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+		{0},
+		{"Flips And Rotations", 0, 0, 0, FL_SUBMENU},
+			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Vertical Flip", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Rotate 90 Degrees", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+		{0},
 		{0} //end of Effects dropdown
 	};
 	Fl_RGB_Image* _image = nullptr;
@@ -85,6 +105,7 @@ public:
 		{
 			delete _image;
 		}
+		// Set Breakpoint Below To Run Without Crashing:
 		_image = new Fl_RGB_Image(&_doc->getRawBytes()[0], _doc->getWidth(), _doc->getHeight(), 3);
 		_image_box->image(_image);
 

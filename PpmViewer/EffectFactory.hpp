@@ -8,6 +8,7 @@
 #include "GrayscaleEffect.hpp"
 #include "RandomNoiseEffect.hpp"
 #include "HighContrastEffect.hpp"
+#include "HorizontalFlipEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -68,6 +69,10 @@ public:
 
 		case ImageEffectType::HighContrast:
 			return new HighContrastEffect{};
+			break;
+
+		case ImageEffectType::HorizontalFlip:
+			return new HorizontalFlipEffect{};
 			break;
 
 		default: 

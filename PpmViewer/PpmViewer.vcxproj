@@ -283,6 +283,7 @@
     <ClInclude Include="FL\x.H" />
     <ClInclude Include="GrayscaleEffect.hpp" />
     <ClInclude Include="HighContrastEffect.hpp" />
+    <ClInclude Include="HorizontalFlipEffect.hpp" />
     <ClInclude Include="ImageEffect.hpp" />
     <ClInclude Include="NegateBlueEffect.hpp" />
     <ClInclude Include="NegateGreenEffect.hpp" />

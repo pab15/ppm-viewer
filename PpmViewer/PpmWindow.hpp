@@ -36,7 +36,7 @@ private:
 			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
 		{0},
 		{"Flips And Rotations", 0, 0, 0, FL_SUBMENU},
-			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::HorizontalFlip},
 			{"Vertical Flip", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
 			{"Rotate 90 Degrees", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
 		{0},

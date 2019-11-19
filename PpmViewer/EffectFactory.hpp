@@ -9,6 +9,7 @@
 #include "RandomNoiseEffect.hpp"
 #include "HighContrastEffect.hpp"
 #include "HorizontalFlipEffect.hpp"
+#include "PixelateImageEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -73,6 +74,10 @@ public:
 
 		case ImageEffectType::HorizontalFlip:
 			return new HorizontalFlipEffect{};
+			break;
+
+		case ImageEffectType::PixelateImage:
+			return new PixelateImageEffect{};
 			break;
 
 		default: 

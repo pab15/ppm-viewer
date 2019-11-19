@@ -32,7 +32,7 @@ private:
 			{"Grayscale", 0, applyEffect, (void*)ImageEffectType::Greyscale},
 			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RandomNoise},
 			{"High Contrast", 0, applyEffect, (void*)ImageEffectType::HighContrast},
-			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::PixelateImage},
 			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
 		{0},
 		{"Flips And Rotations", 0, 0, 0, FL_SUBMENU},

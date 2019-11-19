@@ -10,6 +10,7 @@
 #include "HighContrastEffect.hpp"
 #include "HorizontalFlipEffect.hpp"
 #include "PixelateImageEffect.hpp"
+#include "VerticalFlipEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -80,6 +81,9 @@ public:
 			return new PixelateImageEffect{};
 			break;
 
+		case ImageEffectType::VerticalFlip:
+			return new VerticalFlipEffect{};
+			break;
 		default: 
 			break;
 		}

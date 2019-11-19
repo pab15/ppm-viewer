@@ -155,9 +155,19 @@ public:
 		return _height;
 	}
 
+	void setHeight(int height)
+	{
+		_height = height;
+	}
+
 	int getWidth() const
 	{
 		return _width;
+	}
+
+	void setWidth(int width)
+	{
+		_width = width;
 	}
 
 	string getImageFormat() const

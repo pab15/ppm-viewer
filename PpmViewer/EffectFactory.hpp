@@ -11,6 +11,7 @@
 #include "HorizontalFlipEffect.hpp"
 #include "PixelateImageEffect.hpp"
 #include "VerticalFlipEffect.hpp"
+#include "BlurImageEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -84,6 +85,11 @@ public:
 		case ImageEffectType::VerticalFlip:
 			return new VerticalFlipEffect{};
 			break;
+
+		case ImageEffectType::BlurImage:
+			return new BlurImageEffect{};
+			break;
+
 		default: 
 			break;
 		}

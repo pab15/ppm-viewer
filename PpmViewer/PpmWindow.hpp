@@ -33,7 +33,7 @@ private:
 			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RandomNoise},
 			{"High Contrast", 0, applyEffect, (void*)ImageEffectType::HighContrast},
 			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::PixelateImage},
-			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::BlurImage},
 		{0},
 		{"Flips And Rotations", 0, 0, 0, FL_SUBMENU},
 			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::HorizontalFlip},

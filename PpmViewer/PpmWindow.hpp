@@ -101,10 +101,6 @@ public:
 
 	void loadImage()
 	{
-		if (_image != nullptr)
-		{
-			delete _image;
-		}
 		// Set Breakpoint Below To Run Without Crashing:
 		_image = new Fl_RGB_Image(&_doc->getRawBytes()[0], _doc->getWidth(), _doc->getHeight(), 3);
 		_image_box->image(_image);

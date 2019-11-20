@@ -12,6 +12,7 @@
 #include "PixelateImageEffect.hpp"
 #include "VerticalFlipEffect.hpp"
 #include "BlurImageEffect.hpp"
+#include "Rotate90Effect.hpp"
 
 enum class ImageEffectType
 {
@@ -88,6 +89,10 @@ public:
 
 		case ImageEffectType::BlurImage:
 			return new BlurImageEffect{};
+			break;
+
+		case ImageEffectType::Rotate90:
+			return new Rotate90Effect{};
 			break;
 
 		default: 

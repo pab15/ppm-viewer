@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlurImageEffect.hpp" />
+    <ClInclude Include="Rotate90Effect.hpp" />
     <ClInclude Include="VerticalFlipEffect.hpp" />
     <ClInclude Include="EffectFactory.hpp" />
     <ClInclude Include="FileBrowser.hpp" />

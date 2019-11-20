@@ -175,6 +175,29 @@ public:
 		return _format;
 	}
 
+	vector<vector<Pixel>> getRGBData() const
+	{
+		return _rgb_data;
+	}
+
+	void setImageFormat(vector<vector<Pixel>> vect)
+	{
+		_rgb_data = vect;
+	}
+
+	void resizeRGBY(int resize_y)
+	{
+		_rgb_data.resize(resize_y);
+	}
+
+	void resizeRGBX(int resize_x)
+	{
+		for (int i = 0; i < _height; i++)
+		{
+			_rgb_data[i].resize(resize_x);
+		}
+	}
+
 	void setImageFormat(string format)
 	{
 		//error checking

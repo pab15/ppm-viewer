@@ -38,7 +38,7 @@ private:
 		{"Flips And Rotations", 0, 0, 0, FL_SUBMENU},
 			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::HorizontalFlip},
 			{"Vertical Flip", 0, applyEffect, (void*)ImageEffectType::VerticalFlip},
-			{"Rotate 90 Degrees", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Rotate 90 Degrees", 0, applyEffect, (void*)ImageEffectType::Rotate90},
 		{0},
 		{0} //end of Effects dropdown
 	};

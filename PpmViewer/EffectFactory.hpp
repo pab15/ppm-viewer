@@ -13,6 +13,7 @@
 #include "VerticalFlipEffect.hpp"
 #include "BlurImageEffect.hpp"
 #include "Rotate90Effect.hpp"
+#include "SaveImage.hpp"
 
 enum class ImageEffectType
 {
@@ -29,7 +30,8 @@ enum class ImageEffectType
 	VerticalFlip = 11,
 	PixelateImage = 12,
 	BlurImage = 13,
-	Rotate90 = 14
+	Rotate90 = 14,
+	SaveImage = 15
 };
 
 class EffectFactory
@@ -93,6 +95,10 @@ public:
 
 		case ImageEffectType::Rotate90:
 			return new Rotate90Effect{};
+			break;
+
+		case ImageEffectType::SaveImage:
+			return new SaveImageEffect{};
 			break;
 
 		default: 

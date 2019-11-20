@@ -12,9 +12,10 @@ class PpmWindow : public Fl_Double_Window
 {
 private:
 	Fl_Menu_Bar* _menu = nullptr;
-	Fl_Menu_Item _top_bar[29] = {
+	Fl_Menu_Item _top_bar[30] = {
 		{"&File", 0, 0, 0, FL_SUBMENU},
 		{"Open", FL_CTRL + 'o', openFileCallback, this},
+	    {"Save", FL_CTRL + 's', applyEffect, (void*)ImageEffectType::SaveImage},
 		{"Quit",	FL_CTRL + FL_F + 4, quitCallback, 0},
 		{0}, //this ends a menu group; end of File dropdown
 		{"&Effects", 0, 0, 0, FL_SUBMENU},

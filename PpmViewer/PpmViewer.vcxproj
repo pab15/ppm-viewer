@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="BlurImageEffect.hpp" />
     <ClInclude Include="Rotate90Effect.hpp" />
+    <ClInclude Include="SaveImage.hpp" />
     <ClInclude Include="VerticalFlipEffect.hpp" />
     <ClInclude Include="EffectFactory.hpp" />
     <ClInclude Include="FileBrowser.hpp" />
@@ -304,6 +305,7 @@
     <None Include="blocks.ppm" />
     <None Include="bunny.ppm" />
     <None Include="RGB.ppm" />
+    <None Include="SavedImage.ppm" />
     <None Include="tinypix.ppm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -20,25 +20,25 @@ private:
 		{0}, //this ends a menu group; end of File dropdown
 		{"&Effects", 0, 0, 0, FL_SUBMENU},
 		{"Remove Color", 0, 0, 0, FL_SUBMENU},
-			{"Remove Red", 0, applyEffect, (void*)ImageEffectType::RemoveRed},
-			{"Remove Green", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+			{"Remove Red", 0, applyEffect, (void*)ImageEffectType::RemoveRed, FL_MENU_DIVIDER},
+			{"Remove Green", 0, applyEffect, (void*)ImageEffectType::RemoveGreen, FL_MENU_DIVIDER},
 			{"Remove Blue", 0, applyEffect, (void*)ImageEffectType::RemoveBlue},
 		 {0},
 		 {"Negate Color", 0, 0, 0, FL_SUBMENU},
-			{"Negate Red", 0, applyEffect, (void*)ImageEffectType::NegateRed},
-			{"Negate Green", 0, applyEffect, (void*)ImageEffectType::NegateGreen},
+			{"Negate Red", 0, applyEffect, (void*)ImageEffectType::NegateRed, FL_MENU_DIVIDER},
+			{"Negate Green", 0, applyEffect, (void*)ImageEffectType::NegateGreen, FL_MENU_DIVIDER},
 			{"Negate Blue", 0, applyEffect, (void*)ImageEffectType::NegateBlue},
 		 {0},
 		 {"Image Distortions", 0, 0, 0, FL_SUBMENU},
-			{"Grayscale", 0, applyEffect, (void*)ImageEffectType::Greyscale},
-			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RandomNoise},
-			{"High Contrast", 0, applyEffect, (void*)ImageEffectType::HighContrast},
-			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::PixelateImage},
+			{"Grayscale", 0, applyEffect, (void*)ImageEffectType::Greyscale, FL_MENU_DIVIDER},
+			{"Random Noise", 0, applyEffect, (void*)ImageEffectType::RandomNoise, FL_MENU_DIVIDER},
+			{"High Contrast", 0, applyEffect, (void*)ImageEffectType::HighContrast, FL_MENU_DIVIDER},
+			{"Pixelate Image", 0, applyEffect, (void*)ImageEffectType::PixelateImage, FL_MENU_DIVIDER},
 			{"Blur Image", 0, applyEffect, (void*)ImageEffectType::BlurImage},
 		{0},
 		{"Flips And Rotations", 0, 0, 0, FL_SUBMENU},
-			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::HorizontalFlip},
-			{"Vertical Flip", 0, applyEffect, (void*)ImageEffectType::VerticalFlip},
+			{"Horizontal Flip", 0, applyEffect, (void*)ImageEffectType::HorizontalFlip, FL_MENU_DIVIDER},
+			{"Vertical Flip", 0, applyEffect, (void*)ImageEffectType::VerticalFlip, FL_MENU_DIVIDER},
 			{"Rotate 90 Degrees", 0, applyEffect, (void*)ImageEffectType::Rotate90},
 		{0},
 		{0} //end of Effects dropdown
@@ -127,4 +127,5 @@ public:
 	{
 		return _doc;
 	}
+
 };

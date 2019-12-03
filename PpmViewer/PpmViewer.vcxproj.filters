@@ -530,6 +530,9 @@
     <ClInclude Include="SaveImage.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mandelbrot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="bunny.ppm">
@@ -545,6 +548,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="SavedImage.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Mandelbrot.ppm">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

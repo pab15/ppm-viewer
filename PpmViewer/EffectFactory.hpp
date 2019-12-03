@@ -13,6 +13,7 @@
 #include "VerticalFlipEffect.hpp"
 #include "BlurImageEffect.hpp"
 #include "Rotate90Effect.hpp"
+#include "Mandelbrot.hpp"
 #include "SaveImage.hpp"
 
 enum class ImageEffectType
@@ -31,7 +32,8 @@ enum class ImageEffectType
 	PixelateImage = 12,
 	BlurImage = 13,
 	Rotate90 = 14,
-	SaveImage = 15
+	MandelBrot = 15,
+	SaveImage = 16
 };
 
 class EffectFactory
@@ -95,6 +97,10 @@ public:
 
 		case ImageEffectType::Rotate90:
 			return new Rotate90Effect{};
+			break;
+
+		case ImageEffectType::MandelBrot:
+			return new MandelbrotGenerator{};
 			break;
 
 		case ImageEffectType::SaveImage:

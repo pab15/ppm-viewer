@@ -140,6 +140,11 @@ public:
 		return _color_depth;
 	}
 
+	void setColorDepth(int color_depth)
+	{
+		_color_depth = color_depth;
+	}
+
 	string getFileName() const
 	{
 		return _file_name;
@@ -209,6 +214,32 @@ public:
 		{
 			//TODO: throw error 
 		}
+	}
+
+	double realMandelbrot(int x, int image_width, double minR, double maxR)
+	{
+		double range = maxR - minR;
+		return ((x * (range / image_width)) + minR);
+	}
+
+	double imaginaryMandelbrot(int y, int image_height, double minI, double maxI)
+	{
+		double range = maxI - minI;
+		return ((y * (range / image_height)) + minI);
+	}
+
+	int findN(double cr, double ci, int maxIter)
+	{
+		int i = 0;
+		double zR = 0.0, zI = 0.0;
+		while (i < maxIter && ((zR * zR) - (zI * zI)) < 4.0)
+		{
+			double temp = ((zR * zR) - (zI * zI) - cr);
+			zI = (((2.0 * zR) * zI) - ci);
+			zR = temp;
+			i++;
+		}
+		return i;
 	}
 
 	vector<Pixel>& operator[](const int index)

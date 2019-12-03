@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlurImageEffect.hpp" />
+    <ClInclude Include="Mandelbrot.hpp" />
     <ClInclude Include="Rotate90Effect.hpp" />
     <ClInclude Include="SaveImage.hpp" />
     <ClInclude Include="VerticalFlipEffect.hpp" />
@@ -304,6 +305,7 @@
   <ItemGroup>
     <None Include="blocks.ppm" />
     <None Include="bunny.ppm" />
+    <None Include="Mandelbrot.ppm" />
     <None Include="RGB.ppm" />
     <None Include="SavedImage.ppm" />
     <None Include="tinypix.ppm" />

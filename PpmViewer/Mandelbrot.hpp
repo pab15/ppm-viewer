@@ -16,7 +16,7 @@ public:
 		}
 
 		int maxN = (rand() % 255);
-		double minR = (-1 * (rand() % 3)), maxR = (rand() % 3), minI = (-1 * (rand() % 3)), maxI = (rand() % 3);
+		double minR = (-1 * (rand() % 3)), maxR = (rand() % 3), minI = (-1 * (rand() % 3)), maxI = (rand() % 2);
 		
 		for (int i = 0; i < dimensions; i++)
 		{
@@ -26,9 +26,9 @@ public:
 				double ci = doc.imaginaryMandelbrot(i, dimensions, minI, maxI);
 				int n = doc.findN(cr, ci, maxN);
 
-				temp[i][j].red = (n * n % 256);
-				temp[i][j].green = (n * n % 256);
-				temp[i][j].blue = (n * n % 256);
+				temp[i][j].red = (n * (rand() % n) % 255);
+				temp[i][j].green = (n * (rand() % n) % 255);
+				temp[i][j].blue = (n * (rand() % n) % 255);
 			}
 		}
 
